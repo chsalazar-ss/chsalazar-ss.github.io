@@ -55,7 +55,7 @@
 			window.addEventListener("onEmbeddedMessagingWindowClosed", () => {
 				console.log("Received the onEmbeddedMessagingWindowClosed event.");				
 				var chatBtn =  document.getElementById("chatBtn");
-				chatBtn.style.display = "block";	
+				chatBtn.style.display = "flex";	
 			});
 		</script>
    	</body>
