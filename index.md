@@ -18,7 +18,8 @@
 				}
 			};
 		</script>
-		<script type='text/javascript' src='https://firstadvantage--fulltest.sandbox.my.site.com/ESWDemoService1744238318661/assets/js/bootstrap.min.js' onload='initEmbeddedMessaging()'></script>
+		<script type='text/javascript' src='https://firstadvantage--fulltest.sandbox.my.site.com/ESWDemoService1744238318661/assets/js/bootstrap.min.js' onload='initEmbeddedMessaging()'>	
+		</script>
 		<div style="position: fixed; bottom: 35px; right: 35px; border-radius: 40px; background: #1F7A4D; cursor: pointer; color: white">
 			<div onclick="launchChat()" id = "chatBtn" style="display:flex;align-items:center;justify-content:center;">
 		        	<img 
@@ -38,6 +39,7 @@
 				   	);
 				   	var chatBtn =  document.getElementById("chatBtn");
 					chatBtn.style.display = "none";	
+				       	embeddedservice_bootstrap.utilAPI.showChatButton();
 			       }).catch(() => {
 				   console.log(
 				       'Some error occurred when launching Messaging'
@@ -48,6 +50,11 @@
 				   );
 			       });
 		       }
+		</script>
+		<script type="text/javascript"> 
+			window.addEventListener("onEmbeddedMessagingReady", () => {
+			console.log("Received the onEmbeddedMessagingReady event.");
+			});
 		</script>
    	</body>
 </html>
