@@ -35,7 +35,7 @@
 			   embeddedservice_bootstrap.utilAPI.launchChat()
 			       .then(() => {
 					console.log(
-				       		'Successfully launched Messaging'
+				       		'Available Settings Properties', Object.Keys(window.embeddedservice_bootstrap.settings);
 				   	);
 				   	var chatBtn =  document.getElementById("chatBtn");
 					chatBtn.style.display = "none";	
