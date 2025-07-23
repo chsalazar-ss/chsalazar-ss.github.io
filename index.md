@@ -47,5 +47,9 @@
 			       });
 		       }
 		</script>
+		window.addEventListener("onEmbeddedMessagingWindowMinimized", (event) => {
+		  console.log("Received the onEmbeddedMessagingWindowMinimized…");
+		  console.log("Event detail: ", event.detail);
+		});
    	</body>
 </html>
