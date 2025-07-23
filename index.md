@@ -52,8 +52,10 @@
 		       }
 		</script>
 		<script type="text/javascript"> 
-			window.addEventListener("onEmbeddedMessagingReady", () => {
-			console.log("Received the onEmbeddedMessagingReady event.");
+			window.addEventListener("onEmbeddedMessagingWindowClosed", () => {
+				console.log("Received the onEmbeddedMessagingWindowClosed event.");				
+				var chatBtn =  document.getElementById("chatBtn");
+				chatBtn.style.display = "block";	
 			});
 		</script>
    	</body>
