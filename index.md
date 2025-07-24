@@ -20,7 +20,6 @@
 		</script>
 		<script type='text/javascript' src='https://firstadvantage--fulltest.sandbox.my.site.com/ESWDemoService1744238318661/assets/js/bootstrap.min.js' onload='initEmbeddedMessaging()'>	
 		</script>
-			var chatLang = navigator.language == 'fr-CA' ? 'Discuter avec un expert' : 'Chat with an expert';
 			<div style="position: fixed; bottom: 35px; right: 35px; border-radius: 40px; background: #1F7A4D; cursor: pointer; color: white">
 				<div onclick="launchChat()" id = "chatBtn" style="display:flex;align-items:center;justify-content:center;">
 			        	<img 
@@ -28,7 +27,7 @@
 				         style="border-radius: 50%; float:left; margin: 5px;"
 				         height="50px"
 				         width="50px"/>
-				       <h3 style="float:right;margin:auto;">{chatLang}</h3>
+				       <h3 style="float:right;margin:auto;">Chat with an expert</h3>
 			         </div>
 			</div>
 		<script>
