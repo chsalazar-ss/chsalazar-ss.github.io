@@ -14,6 +14,13 @@
 			function initEmbeddedMessaging() {
 				try {
 					embeddedservice_bootstrap.settings.language = 'en_US'; // For example, enter 'en' or 'en-US'
+					/* START:: Conversation Opened Listener */
+					window.addEventListener( "onEmbeddedMessagingConversationOpened", ( event ) => {
+					
+						console.log( "onEmbeddedMessagingConversationOpened" );
+					
+					} );
+					/* END:: Conversation Opened Listener */
 					embeddedservice_bootstrap.settings.hideChatButtonOnLoad = true;
 					embeddedservice_bootstrap.init(
 						'00DWL000002fiFF',
@@ -31,7 +38,20 @@
 			};
 		</script>
 		<script type='text/javascript' src='https://firstadvantage--fulltest.sandbox.my.site.com/ESWDemoService1744238318661/assets/js/bootstrap.min.js' onload='initEmbeddedMessaging()'>			
-		</script>
+		</script>		
+		<script type="text/javascript"> 
+			window.addEventListener("onEmbeddedMessagingWindowClosed", () => {
+				console.log( "onEmbeddedMessagingWindowClosed" );
+				var chatBtn =  document.getElementById("chatBtn");
+				chatBtn.style.display = "flex";	
+			}); 
+			window.addEventListener("onEmbeddedMessagingWindowMinimized", () => {   
+				console.log( "onEmbeddedMessagingWindowMinimized" );
+				console.log("Received the onEmbeddedMessagingWindowMinimized event.");				
+				var chatBtn =  document.getElementById("chatBtn");
+				chatBtn.style.display = "none";	
+			});
+		</script
 		<script>
 			function launchChat() {
 			   embeddedservice_bootstrap.utilAPI.launchChat()
@@ -50,17 +70,6 @@
 				   );
 			       });
 		       }
-		</script>
-		<script type="text/javascript"> 
-			window.addEventListener("onEmbeddedMessagingWindowClosed", () => {				
-				var chatBtn =  document.getElementById("chatBtn");
-				chatBtn.style.display = "flex";	
-			}); 
-			window.addEventListener("onEmbeddedMessagingWindowMinimized", () => {
-				console.log("Received the onEmbeddedMessagingConversationOpened event.");				
-				var chatBtn =  document.getElementById("chatBtn");
-				chatBtn.style.display = "none";	
-			});
 		</script>
    	</body>
 </html>
