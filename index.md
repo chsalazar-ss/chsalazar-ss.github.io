@@ -51,7 +51,7 @@
 				var chatBtn =  document.getElementById("chatBtn");
 				chatBtn.style.display = "none";	
 			});
-		</script
+		</script>
 		<script>
 			function launchChat() {
 			   embeddedservice_bootstrap.utilAPI.launchChat()
