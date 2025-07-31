@@ -52,10 +52,14 @@
 		       }
 		</script>
 		<script type="text/javascript"> 
-			window.addEventListener("onEmbeddedMessagingWindowClosed", () => {
-				console.log("Received the onEmbeddedMessagingWindowClosed event.");				
+			window.addEventListener("onEmbeddedMessagingWindowClosed", () => {				
 				var chatBtn =  document.getElementById("chatBtn");
 				chatBtn.style.display = "flex";	
+			}); 
+			window.addEventListener("onEmbeddedMessagingConversationOpened", () => {
+				console.log("Received the onEmbeddedMessagingConversationOpened event.");				
+				var chatBtn =  document.getElementById("chatBtn");
+				chatBtn.style.display = "none";	
 			});
 		</script>
    	</body>
