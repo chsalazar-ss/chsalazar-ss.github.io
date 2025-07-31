@@ -14,13 +14,11 @@
 			function initEmbeddedMessaging() {
 				try {
 					embeddedservice_bootstrap.settings.language = 'en_US'; // For example, enter 'en' or 'en-US'
-					/* START:: Conversation Opened Listener */
-					window.addEventListener( "onEmbeddedMessagingConversationOpened", ( event ) => {
-					
+					window.addEventListener( "onEmbeddedMessagingConversationOpened", ( event ) => {					
 						console.log( "onEmbeddedMessagingConversationOpened" );
-					
+      						var chatBtn =  document.getElementById("chatBtn");
+						chatBtn.style.display = "none";						
 					} );
-					/* END:: Conversation Opened Listener */
 					embeddedservice_bootstrap.settings.hideChatButtonOnLoad = true;
 					embeddedservice_bootstrap.init(
 						'00DWL000002fiFF',
@@ -45,12 +43,6 @@
 				var chatBtn =  document.getElementById("chatBtn");
 				chatBtn.style.display = "flex";	
 			}); 
-			window.addEventListener("onEmbeddedMessagingWindowMinimized", () => {   
-				console.log( "onEmbeddedMessagingWindowMinimized" );
-				console.log("Received the onEmbeddedMessagingWindowMinimized event.");				
-				var chatBtn =  document.getElementById("chatBtn");
-				chatBtn.style.display = "none";	
-			});
 		</script>
 		<script>
 			function launchChat() {
