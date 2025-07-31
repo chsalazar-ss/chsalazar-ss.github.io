@@ -31,7 +31,7 @@
 			 </div>
 		</div>
 		<script type="text/javascript"> 
-			window.addEventListener( "onEmbeddedMessagingButtonCreated", ( event ) => {					
+			window.addEventListener( "onEmbeddedMessagingButtonStarted", ( event ) => {					
 				console.log( "onEmbeddedMessagingButtonCreated" );
 				var chatBtn =  document.getElementById("chatBtn");
 				chatBtn.style.display = "flex";						
