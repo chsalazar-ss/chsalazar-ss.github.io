@@ -18,6 +18,9 @@
 					window.addEventListener( "onEmbeddedMessagingConversationOpened", ( event ) => {					
 						console.log( "onEmbeddedMessagingConversationOpened" );
 						launchChat();				
+					});					
+					window.addEventListener( "onEmbeddedMessagingButtonCreated ", ( event ) => {					
+						console.log( "onEmbeddedMessagingButtonCreated " );		
 					});
 					embeddedservice_bootstrap.init(
 						'00DWL000002fiFF',
@@ -56,6 +59,8 @@
 				       		'Successfully launched Messaging'
 				   	);
 				       	embeddedservice_bootstrap.utilAPI.showChatButton();
+					var chatBtn =  document.getElementById("chatBtn");
+					chatBtn.style.display = "none";	
 			       }).catch(() => {
 				   console.log(
 				       'Some error occurred when launching Messaging'
