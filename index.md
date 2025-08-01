@@ -40,7 +40,7 @@
 				console.log( "onEmbeddedMessagingConversationOpened" );
 				var chatBtn =  document.getElementById("chatBtn");
 				chatBtn.style.display = "none";						
-			} );
+			});
 		</script>
 		<script>
 			function launchChat() {
