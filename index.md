@@ -1,9 +1,9 @@
-<html>
+<img width="151" height="151" alt="image" src="https://github.com/user-attachments/assets/65cda784-3011-4b7d-8ef2-8778fe1c8c32" /><html>
 	<body>		
 		<div style="position: fixed; bottom: 35px; right: 35px; border-radius: 40px; background: #1F7A4D; cursor: pointer; color: white">
 			<div onclick="launchChat()" id = "chatBtn" style="display:none;align-items:center;justify-content:center;">
 				<img 
-				 src="https://firstadvantage.file.force.com/sfc/servlet.shepherd/version/renditionDownload?rendition=ORIGINAL_Png&versionId=068Vv00000Q7hvi&operationContext=CHATTER&contentId=05TVv00000Vayf9"
+				 src="https://firstadvantage.my.salesforce.com/sfc/dist/version/renditionDownload?rendition=ORIGINAL_Png&versionId=068Vv00000QBS8V&operationContext=DELIVERY&contentId=05TVv00000VfOuR&page=0&d=/a/Vv000004eRC5/znAFp.h8fjJURg_UVU_SKeGFoAbqrArsRoUocss4VbE&oid=00D36000000Iv90&dpt=null&viewId="
 				 style="border-radius: 50%; float:left; margin: 5px;"
 				 height="50px"
 				 width="50px"/>
