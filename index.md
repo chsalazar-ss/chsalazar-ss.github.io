@@ -7,7 +7,7 @@
 					embeddedservice_bootstrap.settings.hideChatButtonOnLoad = true;					 					
 					window.addEventListener( "onEmbeddedMessagingConversationOpened", ( event ) => {					
 						console.log( "onEmbeddedMessagingConversationOpened" );
-						embeddedservice_bootstrap.settings.hideChatButtonOnLoad = true;					
+						launchChat();				
 					});
 					embeddedservice_bootstrap.init(
 						'00DWL000002fiFF',
