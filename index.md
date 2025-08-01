@@ -4,7 +4,11 @@
 			function initEmbeddedMessaging() {
 				try {
 					embeddedservice_bootstrap.settings.language = 'en_US'; // For example, enter 'en' or 'en-US'
-					embeddedservice_bootstrap.settings.hideChatButtonOnLoad = true;
+					embeddedservice_bootstrap.settings.hideChatButtonOnLoad = true;					 					
+					window.addEventListener( "onEmbeddedMessagingConversationOpened", ( event ) => {					
+						console.log( "onEmbeddedMessagingConversationOpened" );
+						embeddedservice_bootstrap.settings.hideChatButtonOnLoad = true;					
+					});
 					embeddedservice_bootstrap.init(
 						'00DWL000002fiFF',
 						'Demo_Service',
@@ -36,8 +40,8 @@
 				var chatBtn =  document.getElementById("chatBtn");
 				chatBtn.style.display = "flex";	
 			}); 					
-			window.addEventListener( "onEmbeddedMessagingConversationOpened", ( event ) => {					
-				console.log( "onEmbeddedMessagingConversationOpened" );
+			window.addEventListener( "onEmbeddedMessagingWindowMinimized", ( event ) => {					
+				console.log( "onEmbeddedMessagingWindowMinimized" );
 				var chatBtn =  document.getElementById("chatBtn");
 				chatBtn.style.display = "none";						
 			});
