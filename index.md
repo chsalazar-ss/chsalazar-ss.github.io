@@ -21,7 +21,7 @@
 		<script type='text/javascript' src='https://firstadvantage--fulltest.sandbox.my.site.com/ESWDemoService1744238318661/assets/js/bootstrap.min.js' onload='initEmbeddedMessaging()'>			
 		</script>
 		<div style="position: fixed; bottom: 35px; right: 35px; border-radius: 40px; background: #1F7A4D; cursor: pointer; color: white">
-			<div onclick="launchChat()" id = "chatBtn" style="display:none;align-items:center;justify-content:center;">
+			<div onclick="launchChat()" id = "chatBtn" style="display:flex;align-items:center;justify-content:center;">
 				<img 
 				 src="https://firstadvantage.file.force.com/sfc/servlet.shepherd/version/renditionDownload?rendition=ORIGINAL_Png&versionId=068Vv00000Q7hvi&operationContext=CHATTER&contentId=05TVv00000Vayf9"
 				 style="border-radius: 50%; float:left; margin: 5px;"
@@ -31,11 +31,6 @@
 			 </div>
 		</div>
 		<script type="text/javascript"> 
-			window.addEventListener( "onEmbeddedMessagingButtonStarted", ( event ) => {					
-				console.log( "onEmbeddedMessagingButtonCreated" );
-				var chatBtn =  document.getElementById("chatBtn");
-				chatBtn.style.display = "flex";						
-			} );
 			window.addEventListener("onEmbeddedMessagingWindowClosed", () => {
 				console.log( "onEmbeddedMessagingWindowClosed" );
 				var chatBtn =  document.getElementById("chatBtn");
