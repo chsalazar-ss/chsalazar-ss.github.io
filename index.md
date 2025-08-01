@@ -1,4 +1,4 @@
-<img width="151" height="151" alt="image" src="https://github.com/user-attachments/assets/65cda784-3011-4b7d-8ef2-8778fe1c8c32" /><html>
+<html>
 	<body>		
 		<div style="position: fixed; bottom: 35px; right: 35px; border-radius: 40px; background: #1F7A4D; cursor: pointer; color: white">
 			<div onclick="launchChat()" id = "chatBtn" style="display:none;align-items:center;justify-content:center;">
