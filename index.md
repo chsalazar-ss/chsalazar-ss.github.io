@@ -7,8 +7,8 @@
 					embeddedservice_bootstrap.settings.hideChatButtonOnLoad = true;		
 					embeddedservice_bootstrap.init(
 						'00DWL000002fiFF',
-						'Demo_Service',
-						'https://firstadvantage--fulltest.sandbox.my.site.com/ESWDemoService1744238318661',
+						'FT1_Demo_Bot',
+						'https://firstadvantage--fulltest.sandbox.my.site.com/ESWFT1DemoBot1762706486022',
 						{
 							scrt2URL: 'https://firstadvantage--fulltest.sandbox.my.salesforce-scrt.com'
 						}
@@ -18,7 +18,7 @@
 				}
 			};
 		</script>
-		<script type='text/javascript' src='https://firstadvantage--fulltest.sandbox.my.site.com/ESWDemoService1744238318661/assets/js/bootstrap.min.js' onload='initEmbeddedMessaging()'>			
+		<script type='text/javascript' src='https://firstadvantage--fulltest.sandbox.my.site.com/ESWFT1DemoBot1762706486022/assets/js/bootstrap.min.js' onload='initEmbeddedMessaging()'>	
 		</script>			
 		<div style="position: fixed; bottom: 35px; right: 35px; border-radius: 40px; background: #1F7A4D; cursor: pointer; color: white">
 			<div onclick="launchChat()" id = "chatBtn" style="display:flex;align-items:center;justify-content:center;">
