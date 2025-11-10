@@ -91,26 +91,5 @@
 			       });
 		       }
 		</script>
-		<script>
-			function getIPAddress() {
-			   embeddedservice_bootstrap.utilAPI.launchChat()
-			       .then(() => {
-					console.log(
-				       		'Successfully launched Messaging'
-				   	);
-				       	embeddedservice_bootstrap.utilAPI.showChatButton();
-					var chatBtn =  document.getElementById("chatBtn");
-					chatBtn.style.display = "none";	
-			       }).catch(() => {
-				   console.log(
-				       'Some error occurred when launching Messaging'
-				   );
-			       }).finally(() => {
-				   console.log(
-				       'Successfully launched Messaging - Finally'
-				   );
-			       });
-		       }
-		</script>
    	</body>
 </html>
