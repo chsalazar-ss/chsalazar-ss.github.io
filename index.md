@@ -31,6 +31,25 @@
 			 </div>
 		</div>
 		<script type="text/javascript"> 
+			window.addEventListener("onEmbeddedMessagingReady", () => {
+       			var ipAddress = '';
+        		var request = new XMLHttpRequest();
+        		request.open('GET', "https://api.ipify.org?format=jsonp=", true);
+        		request.onload = function () {
+		            if (request.status >= 200 && request.status < 400) {
+		                ipAddress = request.responseText;
+		            } else {
+		                ipAddress = 'ipifyIssue';
+		            }
+        		}
+		        request.onerror = function () {
+		            ipAddress = 'fetchError';
+		        }
+        		request.send();
+        		embeddedservice_bootstrap.prechatAPI.setHiddenPrechatFields({
+            		'IPAddress': ipAddress
+        		});
+    		});
 			window.addEventListener("onEmbeddedMessagingWindowClosed", () => {
 				console.log( "onEmbeddedMessagingWindowClosed" );
 				var chatBtn =  document.getElementById("chatBtn");
