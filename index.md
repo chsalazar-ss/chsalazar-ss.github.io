@@ -31,22 +31,25 @@
 			 </div>
 		</div>
 		<script type="text/javascript"> 
+			var ipAddress;
+			var request = new XMLHttpRequest();
+			request.open('GET', "https://api.ipify.org?format=jsonp=", true);
+			request.onload = function () {
+				if (request.status >= 200 && request.status < 400) {
+					ipAddress = request.responseText;
+					console.log('response'+request.responseText);
+				} else {
+					ipAddress = 'ipifyIssue';
+				}
+			}
+			request.onerror = function () {
+				ipAddress = 'fetchError';
+			}
+			request.send();
+			
+			console.log(ipAddress);
+			
 			window.addEventListener("onEmbeddedMessagingReady", () => {
-        		var request = new XMLHttpRequest();
-        		request.open('GET', "https://api.ipify.org?format=jsonp=", true);
-        		request.onload = function () {
-		            if (request.status >= 200 && request.status < 400) {
-		                var ipAddress = request.responseText;
-						console.log('response'+request.responseText);
-		            } else {
-		                var ipAddress = 'ipifyIssue';
-		            }
-        		}
-		        request.onerror = function () {
-		            var ipAddress = 'fetchError';
-		        }
-        		request.send();
-				console.log(ipAddress);
         		embeddedservice_bootstrap.prechatAPI.setHiddenPrechatFields({
             		'IPAddress': ipAddress
         		});
@@ -69,6 +72,27 @@
 		</script>
 		<script>
 			function launchChat() {
+			   embeddedservice_bootstrap.utilAPI.launchChat()
+			       .then(() => {
+					console.log(
+				       		'Successfully launched Messaging'
+				   	);
+				       	embeddedservice_bootstrap.utilAPI.showChatButton();
+					var chatBtn =  document.getElementById("chatBtn");
+					chatBtn.style.display = "none";	
+			       }).catch(() => {
+				   console.log(
+				       'Some error occurred when launching Messaging'
+				   );
+			       }).finally(() => {
+				   console.log(
+				       'Successfully launched Messaging - Finally'
+				   );
+			       });
+		       }
+		</script>
+		<script>
+			function getIPAddress() {
 			   embeddedservice_bootstrap.utilAPI.launchChat()
 			       .then(() => {
 					console.log(
